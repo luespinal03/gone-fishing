@@ -176,8 +176,7 @@ while (timeCtr <= 6 && totalWeight < 10) {
         console.log('You just kept this Pokemon, lets keep hunting !');
         console.log("\n==========================================\n");
 
-    }
-    if (userInput === 'c' && timeCtr === 5) {
+    } if (userInput === 'c' && timeCtr === 5) {
         console.log("This is your last turn, make it count !!!!")
     } else if (userInput === 'r') {
         console.log('\n===== You just released this Pokemom, better luck next chance!')
