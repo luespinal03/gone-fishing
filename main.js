@@ -161,7 +161,7 @@ while (timeCtr <= 6 && totalWeight < 10) {
 
     if (userInput === 'c') {
         if (totalWeight + newFish.weight > 10) {
-            console.log('\n===You cannot catch this Pokemon because it will put you over your limit!===\n')
+            console.log('\n===You cannot catch this Pokemon because it will put you over your weight limit!===\n')
             console.log(`Your total weight and value: ${totalWeight}lbs with a total value of $${totalValue}`);
             console.log("\n");
             console.log(`The time is ${timeCtr}:00 am`);
