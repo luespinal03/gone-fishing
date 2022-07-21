@@ -49,10 +49,10 @@ console.log("\n==========================================\n");
 console.log("You are a Pokemon trainer! You have only 6 hours to catch as many Pokemon as you can with the total weight under 10lbs.  It takes roughly 1 hour to catch each Pokemon (they are slippery little turds). The goal is to keep it under 10lbs and maximize your value over the 6 given hours.");
 console.log('\n');
 
-console.log("The time is 0:00am. So far you've caught: 0 fish, 0 lbs, $0.00");
+console.log("The time is 0:00 am. So far you've caught: 0 fish, 0 lbs, $0.00");
 
 console.log("\n==========================================\n");
- 
+
 console.log("You just ran into your first Pokemon !! What are you going to do!?!?");
 console.log('\n');
 /* 
@@ -132,7 +132,7 @@ let createdFish = (name, weight, value) => {
     let newFish = {
         name: name,
         weight: weight,
-        value: value 
+        value: value
     }
     return newFish;
 }
@@ -143,7 +143,7 @@ let createdFish = (name, weight, value) => {
  ******************************
  */
 
-while (timeCtr < 6 && totalWeight < 10) {
+while (timeCtr <= 6 && totalWeight < 10) {
 
     // Functions running through the arrays of predetermined information
     d1(descriptor1);
@@ -160,35 +160,44 @@ while (timeCtr < 6 && totalWeight < 10) {
     let userInput = prompt("Would you like to (c)atch this Pokemon? OR Would you like to (r)elease this Pokemon?: ");
 
     if (userInput === 'c') {
+        if (totalWeight + newFish.weight > 10) {
+            console.log('\n===You cannot catch this Pokemon because it will put you over your limit!===\n')
+            console.log(`Your total weight and value: ${totalWeight}lbs with a total value of $${totalValue}`);
+            console.log("\n");
+            console.log(`The time is ${timeCtr}:00 am`);
+            timeCtr++
+            continue;
+        }
         fishKept.push(newFish.name);
         totalValue += newFish.value;
         totalWeight += newFish.weight;
         console.log(newFish);
         console.log("\n==========================================\n");
         console.log('You just kept this Pokemon, lets keep hunting !');
-         console.log("\n==========================================\n");
+        console.log("\n==========================================\n");
 
-    } if (userInput === 'c' && timeCtr === 4) {
-        console.log("This is your last turn, make it count !!!!")
     }
-    
-    else if (userInput === 'r') {
+    if (userInput === 'c' && timeCtr === 5) {
+        console.log("This is your last turn, make it count !!!!")
+    } else if (userInput === 'r') {
         console.log('\n===== You just released this Pokemom, better luck next chance!')
         console.log(newFish);
         console.log("\n==========================================\n");
         console.log('You just released this Pokemon, lets keep hunting !')
-         console.log("\n==========================================\n");
+        console.log("\n==========================================\n");
     }
 
     //  (createdFish(finishedFishName, indivWeight, indivValue));
 
     timeCtr++;
+    console.log("\n");
     console.log(`The time is ${timeCtr}:00 am`);
     console.log('\n');
     console.log(`Your total weight and value: ${totalWeight}lbs with a total value of $${totalValue}`);
     console.log('\n');
     finishedFishName = '';
 }
+console.log("\n");
 console.log("GAME OVER");
 console.log("GAME OVER");
 console.log("GAME OVER");
