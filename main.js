@@ -85,49 +85,22 @@ let fishName = (arr) => {
  ******************************
  */
 
-/* 
- ******************************
- ****** FISH WEIGHT SECTION ******
- ******************************
- */
 
+//  GENERATING THE WEIGHT
 let fishWeight = () => {
     let weight = (Math.ceil(Math.random() * 1000) / 200)
     return weight
 }
 indivWeight = fishWeight();
 
-/* 
- ******************************
- ****** FISH WEIGHT SECTION ******
- ******************************
- */
-
-
-/* 
- ******************************
- ****** FISH VALUE SECTION ******
- ******************************
- */
-
+//  GENERATING THE VALUE
 let fishValue = () => {
     let value = Number(Math.ceil(Math.random() * 1000) / 50)
     return value
 }
 indivValue = fishValue();
 
-/* 
- ******************************
- ****** FISH VALUE SECTION ******
- ******************************
- */
-
-
-/* 
- ******************************
- ****** FULL FISH OBJECT ******
- ******************************
- */
+//  FULL FISH OBJECT
 let createdFish = (name, weight, value) => {
     let newFish = {
         name: name,
@@ -136,12 +109,7 @@ let createdFish = (name, weight, value) => {
     }
     return newFish;
 }
-// console.log(createFish(finishedFishName, indivWeight, indivValue));
-/* 
- ******************************
- ****** FULL FISH OBJECT ******
- ******************************
- */
+
 
 while (timeCtr <= 5 && totalWeight < 10) {
     // Functions running through the arrays of predetermined information
