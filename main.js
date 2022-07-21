@@ -46,7 +46,7 @@ let newFish = {};
 
 console.log("\n==========================================\n");
 
-console.log("You are a Pokemon trainer! You have only 6 hours to catch as many Pokemon as you can with the total weight under 10lbs.  It takes roughly 1 hour to catch each Pokemon (they are slippery little turds). The goal is to keep it under 10lbs and maximize your value over the 6 given hours.");
+console.log("You are a Pokemon trainer! You have only 6 hours to catch as many Pokemon as you can with the total weight under 10lbs.  It takes roughly 1 hour to catch each Pokemon (they are slippery little turds). The goal is to keep it under 10 lbs and maximize your value over the 6 given hours.");
 console.log('\n');
 
 console.log("The time is 0:00 am. So far you've caught: 0 fish, 0 lbs, $0.00");
@@ -143,8 +143,7 @@ let createdFish = (name, weight, value) => {
  ******************************
  */
 
-while (timeCtr <= 6 && totalWeight < 10) {
-
+while (timeCtr <= 5 && totalWeight < 10) {
     // Functions running through the arrays of predetermined information
     d1(descriptor1);
     d2(descriptor2);
@@ -155,6 +154,7 @@ while (timeCtr <= 6 && totalWeight < 10) {
     indivWeight = fishWeight();
     indivValue = fishValue();
     newFish = createdFish(finishedFishName, indivWeight, indivValue);
+    // First fish of the game
     console.log(newFish)
     console.log("\n==========================================\n");
     let userInput = prompt("Would you like to (c)atch this Pokemon? OR Would you like to (r)elease this Pokemon?: ");
@@ -162,10 +162,10 @@ while (timeCtr <= 6 && totalWeight < 10) {
     if (userInput === 'c') {
         if (totalWeight + newFish.weight > 10) {
             console.log('\n===You cannot catch this Pokemon because it will put you over your weight limit!===\n')
-            console.log(`Your total weight and value: ${totalWeight}lbs with a total value of $${totalValue}`);
+            console.log(`Your total weight is: ${totalWeight}lbs. Your total value is: $${totalValue}`);
             console.log("\n");
-            console.log(`The time is ${timeCtr}:00 am`);
             timeCtr++
+            console.log(`The time is ${timeCtr}:00 am`);
             continue;
         }
         fishKept.push(newFish.name);
@@ -176,7 +176,7 @@ while (timeCtr <= 6 && totalWeight < 10) {
         console.log('You just kept this Pokemon, lets keep hunting !');
         console.log("\n==========================================\n");
 
-    } if (userInput === 'c' && timeCtr === 5) {
+    } if (userInput === 'c' && timeCtr === 4) {
         console.log("This is your last turn, make it count !!!!")
     } else if (userInput === 'r') {
         console.log('\n===== You just released this Pokemom, better luck next chance!')
@@ -186,16 +186,16 @@ while (timeCtr <= 6 && totalWeight < 10) {
         console.log("\n==========================================\n");
     }
 
-    //  (createdFish(finishedFishName, indivWeight, indivValue));
-
     timeCtr++;
     console.log("\n");
     console.log(`The time is ${timeCtr}:00 am`);
     console.log('\n');
-    console.log(`Your total weight and value: ${totalWeight}lbs with a total value of $${totalValue}`);
+    console.log(`Your total weight is: ${totalWeight}lbs. Your total value is: $${totalValue}`);
     console.log('\n');
     finishedFishName = '';
 }
+
+// Once the game is done stuff
 console.log("\n");
 console.log("GAME OVER");
 console.log("GAME OVER");
@@ -207,8 +207,3 @@ console.log("GAME OVER");
 console.log("GAME OVER");
 console.log("GAME OVER");
 console.log("\n");
-
-
-// QUESTIONS FOR GREYSON
-// 1. How do I update the time each time? The function aboce is giving me one result forever
-// 
