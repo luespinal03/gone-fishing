@@ -124,8 +124,9 @@ while (timeCtr <= 5 && totalWeight < 10) {
     newFish = createdFish(finishedFishName, indivWeight, indivValue);
     // First fish of the game
     console.log(newFish)
-    console.log("\n==========================================\n");
+    console.log("\n");
     let userInput = prompt("Would you like to (c)atch this Pokemon? OR Would you like to (r)elease this Pokemon?: ");
+    console.log("\n==========================================\n");
 
     if (userInput === 'c') {
         if (totalWeight + newFish.weight > 10) {
@@ -139,8 +140,8 @@ while (timeCtr <= 5 && totalWeight < 10) {
         fishKept.push(newFish.name);
         totalValue += newFish.value;
         totalWeight += newFish.weight;
-        console.log(newFish);
-        console.log("\n==========================================\n");
+        // console.log(newFish);
+        // console.log("\n==========================================\n");
         console.log('You just kept this Pokemon, lets keep hunting !');
         console.log("\n==========================================\n");
 
