@@ -149,10 +149,10 @@ while (timeCtr <= 5 && totalWeight < 10) {
     if (userInput === 'c' && timeCtr === 4) {
         console.log("This is your last turn, make it count !!!!")
     } else if (userInput === 'r') {
-        console.log('\n===== You just released this Pokemom, better luck next chance!')
+        console.log('\n===== You just released this Pokemom, better luck next time! =====\n')
         console.log(newFish);
         console.log("\n==========================================\n");
-        console.log('You just released this Pokemon, lets keep hunting !')
+        console.log('Lets keep hunting !')
         console.log("\n==========================================\n");
     }
 
