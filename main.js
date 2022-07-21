@@ -2,35 +2,7 @@ const prompt = require('prompt-sync')({
     sigint: true
 });
 
-// let userPrompt = prompt('Enter a string: ');
-// console.log(`User string: ${userPrompt}`);
 
-// let userNumber = Number(prompt("Enter a number: "));
-// console.log(userNumber);
-
-/*
-fish {
-    name: string,
-    weight: number,
-    value: number
-}
-*/
-
-
-/*
-for our descriptive words
-
-2 descriptors and 1 fish type array of descriptors
-2 arrays of descriptors
-1 array of fish types
-
-*/
-// hourCtr - variable to keep track of the current time
-// while loop to keep track of time
-
-//  fishKeep.length = totalLength
-// variable for total value
-// variable for total pounds (no more than 10lbs otherwise game ends)
 
 let fishKept = [];
 let descriptor1 = [" ", "Huge", "Miniature", "Big", "Small", "Fat", "Thicc", "Thiccalicious", "Skinny", "Scronny", "Smeagol looking mf"];
