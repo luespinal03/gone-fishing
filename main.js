@@ -89,8 +89,8 @@ while (timeCtr <= 5 && totalWeight < 10) {
     d2(descriptor2);
     fishName(fishType);
     // Functions running through the arrays of predetermined information
-    fishWeight()
-    fishValue()
+    fishWeight();
+    fishValue();
     indivWeight = fishWeight();
     indivValue = fishValue();
     newFish = createdFish(finishedFishName, indivWeight, indivValue);
