@@ -18,10 +18,10 @@ let newFish = {};
 
 console.log("\n==========================================\n");
 
-console.log("You are a Pokemon trainer! You have only 6 hours to catch as many Pokemon as you can with the total weight under 10lbs.  It takes roughly 1 hour to catch each Pokemon (they are slippery little turds). The goal is to keep it under 10 lbs and maximize your value over the 6 given hours.");
+console.log("You are a Pokemon trainer! You have only 6 hours to catch as many Pokemon as you can with the total weight under 10 lbs. It takes roughly 1 hour to catch each Pokemon (they are slippery little turds). The goal is to keep it under 10 lbs and maximize your value over the 6 given hours.");
 console.log('\n');
 
-console.log("The time is 0:00 am. So far you've caught: 0 fish, 0 lbs, $0.00");
+console.log("The time is 0:00 am. So far you've caught: 0 fish, 0 lbs, $0.00.");
 
 console.log("\n==========================================\n");
 
@@ -33,21 +33,21 @@ console.log('\n');
  ******************************
  */
 
-// Description 1
+// Description 1 
 let d1 = (arr) => {
-    let randomItem = Math.ceil(Math.random() * 10)
+    let randomItem = Math.ceil(Math.random() * 10) // randomItem is the index number that comes out of this 
     finishedFishName += " " + (arr[randomItem]);
 }
 
 // Description 2
 let d2 = (arr) => {
-    let randomItem = Math.ceil(Math.random() * 10)
+    let randomItem = Math.ceil(Math.random() * 10) // randomItem is the index number that comes out of this 
     finishedFishName += " " + (arr[randomItem]);
 }
 
 // Description 3
 let fishName = (arr) => {
-    let randomItem = Math.ceil(Math.random() * 10)
+    let randomItem = Math.ceil(Math.random() * 10) // randomItem is the index number that comes out of this 
     finishedFishName += " " + (arr[randomItem])
 }
 
@@ -67,14 +67,14 @@ indivWeight = fishWeight();
 
 //  GENERATING THE VALUE
 let fishValue = () => {
-    let value = Number(Math.ceil(Math.random() * 1000) / 50)
+    let value = (Math.ceil(Math.random() * 1000) / 50)
     return value
 }
 indivValue = fishValue();
 
 //  FULL FISH OBJECT
 let createdFish = (name, weight, value) => {
-    let newFish = {
+    newFish = {
         name: name,
         weight: weight,
         value: value
@@ -102,8 +102,8 @@ while (timeCtr <= 5 && totalWeight < 10) {
 
     if (userInput === 'c') {
         if (totalWeight + newFish.weight > 10) {
-            console.log('\n===You cannot catch this Pokemon because it will put you over your weight limit!===\n')
-            console.log(`Your total weight is: ${totalWeight}lbs. Your total value is: $${totalValue}`);
+            console.log('\n===You cannot catch this Pokemon because it will put you over your weight limit!. Pokemon must be (r)eleased then try again !!===\n')
+            console.log(`Your total weight is: ${totalWeight} lbs. Your total value is: $${totalValue}`);
             console.log("\n");
             timeCtr++
             console.log(`The time is ${timeCtr}:00 am`);
@@ -114,7 +114,7 @@ while (timeCtr <= 5 && totalWeight < 10) {
         totalWeight += newFish.weight;
         // console.log(newFish);
         // console.log("\n==========================================\n");
-        console.log('You just kept this Pokemon, lets keep hunting !');
+        console.log('Alright ! Good catch !, lets keep hunting !');
         console.log("\n==========================================\n");
 
     }
@@ -132,7 +132,7 @@ while (timeCtr <= 5 && totalWeight < 10) {
     console.log("\n");
     console.log(`The time is ${timeCtr}:00 am`);
     console.log('\n');
-    console.log(`Your total weight is: ${totalWeight}lbs. Your total value is: $${totalValue}`);
+    console.log(`Your total weight is: ${totalWeight} lbs. Your total value is: $${totalValue}`);
     console.log('\n');
     finishedFishName = '';
 }
