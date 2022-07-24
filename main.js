@@ -7,7 +7,7 @@ const prompt = require('prompt-sync')({
 let fishKept = [];
 let descriptor1 = [" ", "Huge", "Miniature", "Big", "Small", "Fat", "Thicc", "Thiccalicious", "Skinny", "Scronny", "Smeagol looking mf"];
 let descriptor2 = [" ", "Yellow", "Red", "Purple", "Green", "Blue", "Pink", "Orange", "Aqua", "Gray", "Black"];
-let fishType = [" ", "Pikachu", "Lugia", "Raikou", "Snorlax", "Entei", "Suicune", "Ho-oh", "Rayquaza", "Mewtwo", "Zapdos"];
+let descriptor3 = [" ", "Pikachu", "Lugia", "Raikou", "Snorlax", "Entei", "Suicune", "Ho-oh", "Rayquaza", "Mewtwo", "Zapdos"];
 let totalWeight = 0;
 let totalValue = 0;
 let indivWeight = 0;
@@ -87,7 +87,7 @@ while (timeCtr <= 5 && totalWeight < 10) {
     // Functions running through the arrays of predetermined information
     d1(descriptor1);
     d2(descriptor2);
-    fishName(fishType);
+    fishName(descriptor3);
     // Functions running through the arrays of predetermined information
     fishWeight();
     fishValue();
