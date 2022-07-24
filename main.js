@@ -46,7 +46,7 @@ let d2 = (arr) => {
 }
 
 // Description 3
-let fishName = (arr) => {
+let d3 = (arr) => {
     let randomItem = Math.ceil(Math.random() * 10) // randomItem is the index number that comes out of this 
     finishedFishName += " " + (arr[randomItem])
 }
@@ -87,7 +87,7 @@ while (timeCtr <= 5 && totalWeight < 10) {
     // Functions running through the arrays of predetermined information
     d1(descriptor1);
     d2(descriptor2);
-    fishName(descriptor3);
+    d3(descriptor3);
     // Functions running through the arrays of predetermined information
     fishWeight();
     fishValue();
